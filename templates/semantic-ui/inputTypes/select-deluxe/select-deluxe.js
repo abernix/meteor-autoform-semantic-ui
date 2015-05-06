@@ -118,11 +118,14 @@ Template.afSelectDeluxe_semanticUI.helpers({
   },
   dropdownAtts: function () {
     var atts = {
-      class: 'ui fluid selection dropdown'
+      class: 'ui selection dropdown'
     };
 
     // Add semantic-ui class
-    atts = AutoForm.Utility.addClass(atts, "search");
+    if ( this.atts.withSearch ) {
+      atts = AutoForm.Utility.addClass(atts, "search");
+    }
+
 
     return atts;
   },
@@ -132,18 +135,15 @@ Template.afSelectDeluxe_semanticUI.helpers({
   itemElementUpgrades: function () {
     var upgradeHtml = "";
     _.each(supportedItemUpgrades, function (tag, type) {
-      if ( typeof this.atts['with' + capitalizeFirstLetter(type)] !== "undefined" ) {
-        var className = typeof this.atts['with' + capitalizeFirstLetter(type)] === "string" ? this.atts['with' + capitalizeFirstLetter(type)] : type + "Class";
-        if ( this[className] ) {
-          var elemContent, elemAttrs = { 'class': this[className] };
-          if ( type === "image" && this[type + "Src"] ) {
-            elemAttrs.src = this[type + "Src"];
-          } else if ( this[type + "Content"] ) {
-            elemContent = this[type + "Content"];
-          }
-
-          upgradeHtml += HTML.toHTML(HTML[tag](HTML.Attrs(elemAttrs), elemContent));
+      if ( this[type] ) {
+        var elemContent, elemAttrs = { 'class': this[type] };
+        if ( type === "image" && this[type + "Src"] ) {
+          elemAttrs.src = this[type + "Src"];
+        } else if ( this[type + "Content"] ) {
+          elemContent = this[type + "Content"];
         }
+
+        upgradeHtml += HTML.toHTML(HTML[tag](HTML.Attrs(elemAttrs), elemContent));
       }
     }, this);
     return Spacebars.SafeString(upgradeHtml);
@@ -151,10 +151,10 @@ Template.afSelectDeluxe_semanticUI.helpers({
 });
 
 Template.afSelectDeluxe_semanticUI.onRendered(function() {
-  $(this.firstNode).find(".ui.dropdown").dropdown();
+  $(this.firstNode).dropdown();
 
   this.autorun(function () {
     var dataContext = Template.currentData();
-    $(this.firstNode()).find(".ui.dropdown").dropdown('set selected', dataContext.value);
+    $(this.firstNode()).dropdown('set selected', dataContext.value);
   });
 });
