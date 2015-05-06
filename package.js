@@ -1,6 +1,6 @@
 Package.describe({
   name: 'fabienb4:autoform-semantic-ui',
-  version: '0.2.0',
+  version: '0.3.4',
   // Brief, one-line summary of the package.
   summary: 'Semantic-ui template for aldeed:autoform package.',
   // URL to the Git repository containing the source code for this package.
@@ -55,8 +55,6 @@ Package.onUse(function(api) {
     'templates/semantic-ui/inputTypes/select-deluxe/select-deluxe.js',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.html',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.js',
-    'templates/semantic-ui/inputTypes/select-search/select-search.html',
-    'templates/semantic-ui/inputTypes/select-search/select-search.js',
     'templates/semantic-ui/inputTypes/submit/submit.html',
     'templates/semantic-ui/inputTypes/tel/tel.html',
     'templates/semantic-ui/inputTypes/text/text.html',
