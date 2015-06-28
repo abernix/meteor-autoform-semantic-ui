@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'fabienb4:autoform-semantic-ui',
+  name: 'abernix:autoform-semantic-ui',
   version: '0.4.1',
   // Brief, one-line summary of the package.
   summary: 'Semantic-ui template for aldeed:autoform package.',
