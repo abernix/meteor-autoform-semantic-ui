@@ -126,6 +126,9 @@ Template.afSelectDeluxe_semanticUI.helpers({
       atts = AutoForm.Utility.addClass(atts, "search");
     }
 
+    if ( typeof this.atts.disabled !== "undefined" ) {
+      atts = AutoForm.Utility.addClass(atts, "disabled");
+    }
 
     return atts;
   },
