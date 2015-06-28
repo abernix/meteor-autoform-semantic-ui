@@ -2,6 +2,8 @@
 
 Semantic-ui template for `aldeed:autoform` package.
 
+> semantic-ui is NOT included in this package, to allow you to use a customized version if you need to. If you don't use a custom version, you must add the default package `semantic:ui-css` to your meteor app, otherwise, there will be no styling.
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -22,11 +24,17 @@ $ meteor add fabienb4:autoform-semantic-ui
 ## Usage
 
 In your code (client side) add:
-
 ```js
 Meteor.startup(function() {
   AutoForm.setDefaultTemplate("semanticUI");
 });
+```
+
+Or you can set the template on each form:
+```js
+{{#autoForm collection="Items" id="itemsInsertForm" type="insert" template="semanticUI"}}
+
+{{/autoForm}}
 ```
 
 For more information on how to use autoform, please refer to [aldeed:autoform README](https://github.com/aldeed/meteor-autoform/blob/master/README.md).
@@ -108,14 +116,28 @@ A field's errors can be shown in the label of the field.
 
 In the form attributes (all fields in the form will show errors in labels):
 ```js
-{{#autoform collection="Items" id="itemsInsertForm" type="insert" errorsInLabels=true}}
+{{#autoForm collection="Items" id="itemsInsertForm" type="insert" errorsInLabels=true}}
   //...
-{{/autoform}}
+{{/autoForm}}
 ```
 
 In the field attributes (only this field will show errors in label):
 ```js
 {{> afQuickField name="name" errorsInLabel=true}}
+```
+
+#### `boolean-checkbox` types
+
+##### `slider` (see: [slider](http://semantic-ui.com/modules/checkbox.html#slider))
+
+```js
+{{> afQuickField name="isEnabled" checkboxType="slider"}}
+```
+
+##### `toggle` (see: [toggle](http://semantic-ui.com/modules/checkbox.html#toggle))
+
+```js
+{{> afQuickField name="isEnabled" checkboxType="toggle"}}
 ```
 
 ## License
