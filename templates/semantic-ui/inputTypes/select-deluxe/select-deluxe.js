@@ -105,7 +105,7 @@ Template.afSelectDeluxe_semanticUI.helpers({
     var atts = _.clone(this.atts);
 
     delete atts.firstOption;
-    delete atts.withSearch;
+    delete atts.search;
 
     _.each(supportedItemUpgrades, function (options, type) {
       delete atts["with" + capitalizeFirstLetter(type)];
@@ -122,7 +122,7 @@ Template.afSelectDeluxe_semanticUI.helpers({
     };
 
     // Add semantic-ui class
-    if ( this.atts.withSearch ) {
+    if ( this.atts.search ) {
       atts = AutoForm.Utility.addClass(atts, "search");
     }
 
