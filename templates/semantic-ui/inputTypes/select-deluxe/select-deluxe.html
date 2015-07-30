@@ -4,6 +4,9 @@
     <i class="dropdown icon"></i>
     <div class="default text">{{firstOption}}</div>
     <div class="menu">
+      {{#unless required}}
+        <div class="ui fluid compact clear button"><i class="erase icon"></i></div>
+      {{/unless}}
       {{#each this.items}}
         {{#if this.optgroup}}
           <div class="header">{{this.optgroup}}</div>

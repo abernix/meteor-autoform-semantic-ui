@@ -153,6 +153,12 @@ Template.afSelectDeluxe_semanticUI.helpers({
   }
 });
 
+Template.afSelectDeluxe_semanticUI.events({
+  "click .ui.clear.button": function(event) {
+    $(event.target).closest(".ui.dropdown").dropdown("clear").dropdown("hide");
+  }
+});
+
 Template.afSelectDeluxe_semanticUI.onRendered(function() {
   $(this.firstNode).dropdown();
 
