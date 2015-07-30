@@ -1,4 +1,4 @@
-Template.afRadioGroup_semanticUI.helpers({
+Template.afRadioGroupInline_semanticUI.helpers({
   atts: function selectedAttsAdjust() {
     var atts = _.clone(this.atts);
 
@@ -19,6 +19,6 @@ Template.afRadioGroup_semanticUI.helpers({
   }
 });
 
-Template.afRadioGroup_semanticUI.onRendered(function() {
+Template.afRadioGroupInline_semanticUI.onRendered(function() {
   $(this.firstNode).find(".ui.radio.checkbox").checkbox();
 });

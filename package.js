@@ -1,6 +1,6 @@
 Package.describe({
   name: 'abernix:autoform-semantic-ui',
-  version: '0.4.4',
+  version: '0.4.5',
   // Brief, one-line summary of the package.
   summary: 'Semantic-ui template for aldeed:autoform package.',
   // URL to the Git repository containing the source code for this package.
@@ -54,10 +54,14 @@ Package.onUse(function(api) {
     'templates/semantic-ui/inputTypes/select/select.js',
     'templates/semantic-ui/inputTypes/select-checkbox/select-checkbox.html',
     'templates/semantic-ui/inputTypes/select-checkbox/select-checkbox.js',
+    'templates/semantic-ui/inputTypes/select-checkbox-inline/select-checkbox-inline.html',
+    'templates/semantic-ui/inputTypes/select-checkbox-inline/select-checkbox-inline.js',
     'templates/semantic-ui/inputTypes/select-deluxe/select-deluxe.html',
     'templates/semantic-ui/inputTypes/select-deluxe/select-deluxe.js',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.html',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.js',
+    'templates/semantic-ui/inputTypes/select-radio-inline/select-radio-inline.html',
+    'templates/semantic-ui/inputTypes/select-radio-inline/select-radio-inline.js',
     'templates/semantic-ui/inputTypes/submit/submit.html',
     'templates/semantic-ui/inputTypes/tel/tel.html',
     'templates/semantic-ui/inputTypes/text/text.html',
