@@ -56,6 +56,8 @@ Package.onUse(function(api) {
     'templates/semantic-ui/inputTypes/select-checkbox/select-checkbox.js',
     'templates/semantic-ui/inputTypes/select-checkbox-inline/select-checkbox-inline.html',
     'templates/semantic-ui/inputTypes/select-checkbox-inline/select-checkbox-inline.js',
+    'templates/semantic-ui/inputTypes/select-deluxe/select-deluxe.html',
+    'templates/semantic-ui/inputTypes/select-deluxe/select-deluxe.js',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.html',
     'templates/semantic-ui/inputTypes/select-radio/select-radio.js',
     'templates/semantic-ui/inputTypes/select-radio-inline/select-radio-inline.html',
